@@ -4,6 +4,10 @@
   background-color: rgb(44, 44, 255);
 }
 
+.App-Container {
+  display: flex;
+}
+
 .Cover-Image {
-  width: 100%;
+  width: 50%;
 }
