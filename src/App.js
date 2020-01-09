@@ -1,15 +1,22 @@
 import React from 'react';
-
 import './App.css'
-import Gallery from './components/Gallery'
 import Home from '../src/views/Home'
-import Gooofellas from './assets/Goodfellas.gif'
-import Leon from './assets/Leon2.jpg'
+import Play from './components/Play'
+import NotFound from './components/NotFound'
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+
+
 
 function App() {
   return (
 <div>
-  <Home/>
+<BrowserRouter>
+  <Switch>
+  <Route exact path='/' component={Home} exact = {true} />
+  <Route path='/NotFound' component={NotFound} />
+  <Route path='/Play' component={Play} />
+</Switch>
+</BrowserRouter>
 </div>
   );
 }

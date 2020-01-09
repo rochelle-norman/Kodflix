@@ -6,9 +6,9 @@ import Donnie from '../assets/Donnie.jpg'
 import Bourne from '../assets/Bourne1.jpg'
 import Alien from '../assets/alien.jpeg'
 import Matrix from '../assets/matrix.jpg'
-import Fight from '../assets/Fight.jpg'
 import Spider from '../assets/Spiderman.jpg'
 import Stranger from '../assets/Stranger1.jpg'
+
 
 function Home(){
     return (
@@ -18,28 +18,33 @@ function Home(){
        <Gallery title={"Goodfellas"} img={Goodfellas}/>
          </div>
     <div className="PosterContainer">
-         <Gallery title={"Leon"} img={Leon}/>
-           </div>
-    <div className="PosterContainer">
         <Gallery title={"Donnie Darko"} img={Donnie}/>
              </div>
+            
+             <div className="PosterContainer">
+             <Gallery title={"Leon"} img={Leon}/>
+               </div>
     <div className="PosterContainer">
         <Gallery title={"Matrix"} img={Matrix}/>
     </div>
 </div>
 <div className="RowContainer">
-    <div className="PosterContainer">
-        <Gallery title={"Bourne Identity"} img={Spider}/>
+<div className="PosterContainer">
+<Gallery title={"Stranger Things"} img={Stranger}/>
 </div>
-    <div className="PosterContainer">
-        <Gallery title={"Bourne Identity"} img={Bourne}/>
+<div className="PosterContainer">
+
+<Gallery title={"Bourne Identity"} img={Bourne}/>
 </div>
+   
     <div className="PosterContainer">
         <Gallery title={"Alien"} img={Alien}/>
   </div>
-    <div className="PosterContainer">
-        <Gallery title={"Stranger Things"} img={Stranger}/>
-  </div>
+
+   
+  <div className="PosterContainer">
+  <Gallery title={"Spiderman"} img={Spider}/>
+</div>
  </div>
 </div>
     )
