@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Home from '../src/views/Home'
+import Home from '../frontend/views/Home'
 import Play from './components/Play'
 import NotFound from './components/NotFound'
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
