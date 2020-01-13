@@ -10,49 +10,44 @@ import Spider from '../assets/Spiderman.jpg'
 import Stranger from '../assets/Stranger1.jpg'
 
 
-function Home(){
+function Home() {
     return (
-<div>
-<div className="RowContainer">
-    <div className="PosterContainer">
-       <Gallery title={"Goodfellas"} img={Goodfellas}/>
-         </div>
-    <div className="PosterContainer">
-        <Gallery title={"Donnie Darko"} img={Donnie}/>
-             </div>
-            
-             <div className="PosterContainer">
-             <Gallery title={"Leon"} img={Leon}/>
-               </div>
-    <div className="PosterContainer">
-        <Gallery title={"Matrix"} img={Matrix}/>
-    </div>
-</div>
-<div className="RowContainer">
-<div className="PosterContainer">
-<Gallery title={"Stranger Things"} img={Stranger}/>
-</div>
-<div className="PosterContainer">
-
-<Gallery title={"Bourne Identity"} img={Bourne}/>
-</div>
-   
-    <div className="PosterContainer">
-        <Gallery title={"Alien"} img={Alien}/>
-  </div>
-
-   
-  <div className="PosterContainer">
-  <Gallery title={"Spiderman"} img={Spider}/>
-</div>
- </div>
-</div>
+        <div>
+            <div className="RowContainer">
+                <div className="PosterContainer">
+                    <Gallery title={"Goodfellas"} img={Goodfellas} id="goodfellas" />
+                </div>
+                <div className="PosterContainer">
+                    <Gallery title={"Donnie Darko"} img={Donnie} id="donnie-darko" />
+                </div>
+                <div className="PosterContainer">
+                    <Gallery title={"Leon"} img={Leon} id="leon" />
+                </div>
+                <div className="PosterContainer">
+                    <Gallery title={"Matrix"} img={Matrix} id="matrix" />
+                </div>
+            </div>
+            <div className="RowContainer">
+                <div className="PosterContainer">
+                    <Gallery title={"Stranger Things"} img={Stranger} id="stranger-things" />
+                </div>
+                <div className="PosterContainer">
+                    <Gallery title={"Bourne Identity"} img={Bourne} id="bourne-identity" />
+                </div>
+                <div className="PosterContainer">
+                    <Gallery title={"Alien"} img={Alien} id="alien" />
+                </div>
+                <div className="PosterContainer">
+                    <Gallery title={"Spiderman"} img={Spider} id="spiderman" />
+                </div>
+            </div>
+        </div>
     )
 }
 
 export default Home
 
- {/*  
+{/*  
 //     return (
    
 // <div className="Container">
