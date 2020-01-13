@@ -1,16 +1,19 @@
 import React from 'react';
 import './Gallery.css'
+import { Link } from 'react-router-dom';
 
-function Gallery(props) {
 
+export default function Gallery(props) {
     return (
         <div className="RowContainer">
-          <div className="PosterContainer">
-            <img className = "CoverImage" src={props.img} alt='Movie Poster'></img>
-              <div className ="Title"><h1>{props.title}</h1></div>
-         </div>
+            <div className="PosterContainer">
+                <Link to={props.id}><img className="CoverImage" src={props.img} alt='Movie Poster'></img></Link>
+                <div className="Title"><h1>{props.title}</h1></div>
+            </div>
         </div>
     )
 }
 
-export default Gallery;
+
+{/*  <Link to={props.id}><img className="CoverImage" src={props.img} alt='Movie Poster'></img></Link>
+                <div className="Title"><h1>{props.title}</h1></div> */}
