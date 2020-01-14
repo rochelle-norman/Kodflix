@@ -12,8 +12,4 @@ export default function Gallery(props) {
             </div>
         </div>
     )
-}
-
-
-{/*  <Link to={props.id}><img className="CoverImage" src={props.img} alt='Movie Poster'></img></Link>
-                <div className="Title"><h1>{props.title}</h1></div> */}
+};
