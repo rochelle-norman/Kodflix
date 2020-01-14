@@ -3,7 +3,6 @@
   color: white;
   background-color: rgb(44, 44, 255);
 }
-
-.Cover-Image {
-  width: 100%;
+body {
+  background-color: black;
 }
