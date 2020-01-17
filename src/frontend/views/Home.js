@@ -1,7 +1,7 @@
 import React from 'react';
 import Gallery from '../components/Gallery';
 import getMovies from '../components/getMovies'
-import Details from '../components/Details'
+
 
 export default function Home() {
     return (

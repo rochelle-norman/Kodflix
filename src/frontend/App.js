@@ -14,7 +14,7 @@ export default function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/NotFound' component={NotFound} />
-        <Route exact path='/Details/:movieId' component={Details} />
+        <Route exact path='/:id' component={Details} />
         <Route exact path='/Play' component={Play} />
       </Switch>
     </BrowserRouter>

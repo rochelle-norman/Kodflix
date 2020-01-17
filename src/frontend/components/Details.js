@@ -8,23 +8,30 @@ export default class Details extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-         movie: "Hello, this will be the details page for each Movie & TV show :",
+            title: '',
+        //  message: this.props.match.params.movieId
+        message: 'Hello from React'
+        
         };
     }
  
+
     componentDidMount() {
-        let movieId = this.props.match.params.movieId;
+        let id = this.props.match.params.id;
         let movie = getMovies()
-        .find((movie) => movie.id === movieId);
+        // let title = movie.title
+        .find((movie) => movie.id === id);
        this.setState({movie})
+       
     };
+
+ 
 
     render() {
       
         return (
             <div>
-          
-                <h1>{this.state.movie.title}</h1>
+                <h1>{this.state.message}</h1>
                 <Link to='/'>Back to home page</Link>
             </div>
         );
