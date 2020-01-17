@@ -1,6 +1,6 @@
 import React from 'react';
 import Gallery from '../components/Gallery';
-import getMovies from '../components/GalleryGet'
+import getMovies from '../components/getMovies'
 import Details from '../components/Details'
 
 export default function Home() {
@@ -14,9 +14,8 @@ export default function Home() {
                         title={movie.title}
                         img={movie.img} />
                 ))
-              
             }
-            <Details/>
+          
         </div>
 
     )
