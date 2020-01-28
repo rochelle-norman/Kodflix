@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import getMovies from './getMovies'
 
 
+
 export default class Details extends React.Component {
     constructor(props) {
         super(props);
@@ -23,7 +24,7 @@ export default class Details extends React.Component {
     render() {
 
         if (this.state.movie === undefined) {
-            return <Redirect to="/NotFound" />
+            return <Redirect to='/NotFound' />
         }
         else {
             return (
