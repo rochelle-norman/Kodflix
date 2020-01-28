@@ -2,7 +2,7 @@ import React from 'react';
 import './Details.css'
 import { Link, Redirect } from 'react-router-dom';
 import getMovies from './getMovies'
-
+import NotFound from './NotFound'
 
 
 export default class Details extends React.Component {
