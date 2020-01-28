@@ -1,6 +1,6 @@
 import React from 'react';
 import './Details.css'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import getMovies from './getMovies'
 
 
@@ -24,11 +24,17 @@ export default class Details extends React.Component {
     };
 
     render() {
-        return (
-            <div>
-                <h1>{this.state.message}</h1>
-                <Link to='/'>Back to home page</Link>
-            </div>
-        );
+        if (this.state.movie === undefined) {
+            return <Redirect to="/NotFound"/>
+        }
+        else {
+            return (
+                <div>
+                    <h1>{this.state.message}</h1>
+                    <Link to='/'>Back to home page</Link>
+                </div>
+            );
+        }
+    
     }
 }

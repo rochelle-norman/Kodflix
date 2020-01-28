@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className='TitleContainer'>
         
-        <h1 className='logo'>Kodflix</h1>
+        <h1 className='MainLogo'>Kodflix</h1>
         </div>
 
     )
