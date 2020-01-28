@@ -8,13 +8,10 @@ export default class Details extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
-            message: this.props.match.params.id
-
+            message: this.props.match.params.id,
+            movie: this.props.match.params.id
         };
     }
-
-
     componentDidMount() {
         let id = this.props.match.params.id;
         let movie = getMovies()
@@ -24,8 +21,9 @@ export default class Details extends React.Component {
     };
 
     render() {
+
         if (this.state.movie === undefined) {
-            return <Redirect to="/NotFound"/>
+            return <Redirect to="/NotFound" />
         }
         else {
             return (
@@ -35,6 +33,6 @@ export default class Details extends React.Component {
                 </div>
             );
         }
-    
+
     }
 }
