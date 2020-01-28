@@ -1,10 +1,13 @@
 import React from 'react';
 import Gallery from '../components/Gallery';
-import getMovies from '../components/GalleryGet'
-import Details from '../components/Details'
+import getMovies from '../components/getMovies'
+import Nav from '../components/Nav'
+
 
 export default function Home() {
     return (
+<React.Fragment>
+<Nav />
         <div className="RowContainer">
             {
                 getMovies().map(movie => (
@@ -14,11 +17,11 @@ export default function Home() {
                         title={movie.title}
                         img={movie.img} />
                 ))
-              
             }
-            <Details/>
-        </div>
 
+
+        </div>
+        </React.Fragment>
     )
 };
 
