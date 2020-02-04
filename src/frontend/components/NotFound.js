@@ -1,13 +1,10 @@
 import React from 'react';
 import './NotFound.css'
 
-function NotFound(){
+export default function NotFound() {
     return (
         <div>
-        <h1>This is the 404</h1>
+            <h1>This is the 404</h1>
         </div>
     )
 }
-
-
-export default NotFound;

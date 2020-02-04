@@ -14,10 +14,11 @@ export default function App() {
    
     <BrowserRouter>
       <Switch>
+      <Route exact path='/NotFound' component={NotFound} />
         <Route exact path='/' component={Home} />
         <Route exact path='/:id' component={Details} />
         <Route exact path='/Play' component={Play} />
-        <Route exact path='/NotFound' component={NotFound} />
+        
       </Switch>
     </BrowserRouter>
   );
