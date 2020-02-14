@@ -10,7 +10,6 @@ export default class Details extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            message: this.props.match.params.id,
             movie: this.props.match.params.id,
             // synopsis:  this.props.match.params.id.synopsis,
         };
@@ -21,11 +20,19 @@ export default class Details extends React.Component {
             .find((movie) => movie.id === id);
         this.setState({ movie, })
 
+        fetch('/rest/movies')
+                .then(response => response.json())
+                .then(movieList => {
+                    this.setState({ movieList })
+                    return movieList
+                })
+             
+
     };
 
     render(props) {
 
-        if (this.state.message === undefined) {
+        if (this.state.movie === undefined) {
             return <Redirect to='/NotFound' />
         }
         else {
