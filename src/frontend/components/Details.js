@@ -21,12 +21,12 @@ export default class Details extends React.Component {
         this.setState({ movie, })
 
         fetch('/rest/movies')
-                .then(response => response.json())
-                .then(movieList => {
-                    this.setState({ movieList })
-                    return movieList
-                })
-             
+            .then(response => response.json())
+            .then(movieList => {
+                this.setState({ movieList })
+                return movieList
+            })
+
 
     };
 
@@ -41,7 +41,7 @@ export default class Details extends React.Component {
 
                     <div className="detailsContainer">
                         <div className="detailsRight">
-                            <h1>{this.state.message}</h1>
+                            <h1>{this.state.movie.id}</h1>
                             <p>{this.state.movie.synopsis}</p>
                             <Link to='/'>Back to home page</Link>
                         </div>
