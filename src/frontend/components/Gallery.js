@@ -1,47 +1,63 @@
 import React from 'react';
 import './Gallery.css'
 import { Link } from 'react-router-dom';
+import Nav from '../components/Nav'
+import Movie from '../components/Movie'
 
 export default class extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         movie: [],
-    //         movieList: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            // movie: [],
+            movieList: []
 
-    //     }
-    // }
+        }
+    }
     // getFirst() {
     //     let id = this.props.match.params.id;
     //     let movie = this.state.movieList.find((movie) => movie.id === id);
     //     this.setState({ movie })
     // }
-    // componentDidMount() {
-    //     let id = this.props.match.params.id;
-    //     fetch('/rest/movies')
-    //         .then(response => response.json())
-    //         .then(movieList => {
-
-    //             this.setState({movieList:movieList.movieList})
-    // this.setState({ movieList: movieList.movieList }, () => {
-    //     let movie = this.state.movieList.find((movie) => movie.id === id)
-    //     this.setState({ movie })
-    //})
-    // return movieList})
-    // .then(() => this.getFirst())
-    // }
+    componentDidMount() {
+        let id = this.props.match.params.id;
+        fetch('/rest/movies')
+            .then(response => response.json())
+            .then(movieList => {
+                console.log(movieList)
+                this.setState({ movieList: movieList.movieList })
+                // this.setState({ movieList: movieList.movieList }, () => {
+                //     let movie = this.state.movieList.find((movie) => movie.id === id)
+                //     this.setState({ movie })
+                //})
+                return movieList
+            })
+        // .then(() => this.getFirst())
+    }
 
 
     render() {
-
+        let { movieList } = this.state;
+        console.log(this.state.movieList)
         return (
-            <div className="RowContainer">
-                <div className="PosterContainer">
+            <>
+                <Nav />
+                <div className="RowContainer">
+                    <div className="PosterContainer">
+                         {
+                           movieList.map(movie => (
+                                <Movie
+                                  key={movie.id} 
+                                  id={movie.id} 
+                                  poster={movie.img}
+                                  />
+                            ))
+                          
+                          } 
 
-                    <div className="Title"><h1></h1></div>
-                    
+                      
+                    </div>
                 </div>
-            </div>
+            </>
         )
 
     }

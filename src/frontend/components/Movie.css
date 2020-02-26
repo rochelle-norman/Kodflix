@@ -1,0 +1,55 @@
+img {
+    width: 100%;
+    height: 100%;
+  }
+
+.movie-cover {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    transition: ease 0.2s;
+    height: 85%;
+    border-radius: 30px;
+  }
+  
+  .title-overlay {
+    position: relative;
+    top: 10px;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    opacity: 0;
+    transition: ease 0.8s;
+  }
+
+  .movie-cover-container:hover .movie-cover {
+    transform: translateY(-100px);
+    border: 1px solid white;
+    margin: 9px;
+  }
+
+  .movie-cover-container:hover .title-overlay {
+    opacity: 1;
+  }
+
+@media only screen and (max-width: 600px) {
+    .movie-cover {
+        height: auto;
+        width: 100%;
+        margin: 0 0 10px 0;
+        }
+}
+
+.movie-cover-container {
+  height: 100%;
+}
+
+.movie-wall {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+  position: relative;
+  top: -100px;
+  background-image: linear-gradient(grey, black, black);
+}
