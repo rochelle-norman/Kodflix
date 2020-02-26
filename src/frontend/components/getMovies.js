@@ -1,4 +1,4 @@
-import Goodfellas from '../assets/Goodfellas.gif'
+import Goodfellas from '../assets/Goodfellas.jpg'
 import Leon from '../assets/Leon2.jpg'
 import Donnie from '../assets/Donnie.jpg'
 import Bourne from '../assets/Bourne1.jpg'
